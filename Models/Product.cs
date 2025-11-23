@@ -1,4 +1,6 @@
-﻿namespace SecondHandMarket.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SecondHandMarket.Models
 {
     public class Product
     {
@@ -8,8 +10,8 @@
 
         public string Description { get; set; } = null!;
 
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
-
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         // Kategori ilişkisi
